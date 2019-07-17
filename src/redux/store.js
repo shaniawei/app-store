@@ -1,6 +1,6 @@
 import { createStore } from 'redux'
-import appList from './reducer/appList'
+import reducer from './reducer/index'
 
-let store = createStore(appList)
+let store = createStore(reducer)
 
 export default store

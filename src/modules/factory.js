@@ -10,7 +10,6 @@ export default (apiMap) => {
             url = url.replace(/\{{2}([^}]+?)\}{2}/, (all, key) => {
                 return payload[key]
             })
-            delete apiMap[key].url
             let reqOptions = Object.assign({ method: apiMap[key].method }, apiMap[key].options, options)
             let reqConfig = Object.assign({}, apiMap[key].config, config)
             console.log(apiMap[key])

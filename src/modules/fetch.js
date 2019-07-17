@@ -7,9 +7,9 @@ import { queryJoin } from './url'
  * [options]前端请求需要的额外参数
  * [config]一些特殊配置选项
  */
-export default (url, data = {}, options = {}, config = {}) => {
+export default (url, data = {}, options = { method: 'get' }, config = {}) => {
     let payloads = {
-        mode: 'no-cors'
+        mode: 'cors'
     }
     if (options.method.toLowerCase() === 'get') {
         if (!config.banQuery) {
@@ -24,7 +24,7 @@ export default (url, data = {}, options = {}, config = {}) => {
         fetch(url, payloads).then(res => {
             console.log("reqParam", url, payloads)
             if (res.ok) {
-                res.text().then(data => {
+                res.json().then(data => {
                     try {
                         resolve([null, data])
                     } catch (err) {

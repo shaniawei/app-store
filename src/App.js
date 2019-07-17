@@ -11,7 +11,7 @@ export default class App extends PureComponent {
 
   render() {
     return (
-      <div>
+      <div className="app_box">
         <Provider store={store}>
           <Router>
             {getRouter()}
