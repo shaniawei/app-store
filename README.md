@@ -1,5 +1,6 @@
 ## 项目
 前端技术栈：react+redux+react-router-dom+sass实现的一个PWA
+
 后端技术栈：node+koa+各个中间件，提供cors接口和静态文件服务
 
 ## 项目运行
