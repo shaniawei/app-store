@@ -10,6 +10,7 @@ npm i
 npm run start  // 开启本地调试
 npm run server // 开启后台服务
 ```
+2. 浏览器访问 http://127.0.0.1:3000/
 
 ## 亮点
 1. 数据fetch封装
